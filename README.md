@@ -1,1 +1,1 @@
-# Firescript
+# Firescript Diary
