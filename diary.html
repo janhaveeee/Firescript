@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#cf9aff,#95c0ff);
+  }
+  
+  .content {
+    width: 350px;
+    height: 470px;
+    
+    /* background-color: rgba(88, 152, 230, 0.8); */
+    text-align: center;
+    background-image: url('./diary.jpeg');
+    background-size: contain;
+    padding: 20px;
+    box-shadow: 19px 20px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .multiline-input {
+    width: 90%;
+    height: 85%;
+    padding: 10px;
+    /* padding-right: 40px; */
+    resize: none;
+    background-color: transparent;
+    border: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-family: cursive;
+  }
+  .multiline-input:focus{
+    outline:none;
+  }
+.save-btn{
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    background-color: greenyellow;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+
+
+.title{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    height: 22px;
+    font-size: 16px;
+}
+.title:focus{
+  outline: none;
+}
+.voice-btn{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-image: url("./voice.png");
+    background-size:cover ;
+    color: transparent;
+}
+.label-date{
+    font-size: 18px; 
+    font-weight: bold; 
+    text-align: left;
+    font-family: cursive;
+}
+.label-title{
+    font-size: 18px; 
+    font-weight: bold;
+    font-family: cursive;
+}
+.input-date{
+    margin-bottom: 10px; height: 25px; width: 130px;
+}
+</style>
+<title>Background Image with Multiline Input</title>
+</head>
+<body>
+  <div class="content">
+    <label class="label-date">Date :</label>
+    <input type="date" class="input-date" id="date" ><br>
+    <label class="label-title">Title:</Label>
+    <input type="text" class="title" style="margin-bottom :15px;">
+    <textarea class="multiline-input" placeholder="Tell me about your Day" cols="15" id="diary"></textarea>
+    <button class="save-btn" onclick="Submit()" id="submitButton">Submit</button>
+    <button class="save-btn"  onclick="Update()" id="updateButton" style="display: none;"  >Update </button>
+
+    <button class="voice-btn" id="voiceButton">Voice</button>
+  </div>
+  <div>
+    
+  </div>
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="app.js"></script>
+</html>

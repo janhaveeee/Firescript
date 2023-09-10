@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN FORM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="form-wrapper">
+        <h2>LOGIN</h2>
+        <form action="#">
+            <div class="form-control">
+                <input type="text" id="email" required>
+                <label>USERNAME</label>
+            </div>
+            <div class="form-control">
+                <input type="password" id="Password" required>
+                <label>PASSWORD</label>
+            </div>
+            <button onclick="Login()">LOGIN</button>
+            
+       
+    </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="index.js"></script>
+</html>
